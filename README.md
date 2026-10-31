@@ -1,63 +1,44 @@
 # Portofolio Octiyana Fa'iz Surya Permana
 
-Website portofolio pribadi satu halaman yang dibuat menggunakan HTML semantik, CSS, dan JavaScript murni. Tidak memerlukan framework, package manager, atau proses build.
+Portofolio personal berbahasa Indonesia, dibangun dengan Next.js App Router, React, TypeScript, Tailwind CSS 4, Three.js, dan React Three Fiber.
 
-## Isi proyek
+## Jalankan lokal
+
+```bash
+npm install
+npm run dev
+```
+
+Buka `http://localhost:3000`. Produksi: `npm run build` lalu `npm start`. Node.js 20.9 atau lebih baru diperlukan oleh Next.js.
+
+## Fitur
+
+- Tema dark glassmorphism yang responsif.
+- Kartu mahasiswa 3D/lanyard dibuat dengan React Three Fiber; dapat diputar dengan drag. Tarik kartu ke bawah untuk meregangkan sambungan elastis; tali utama atas tetap di tempat.
+- Render WebGL memakai `frameloop="demand"` dan batas DPR untuk mengurangi penggunaan GPU saat scene diam.
+- Hero, tentang, proyek GitHub, skill, sertifikat, dan tautan kontak.
+
+## Struktur utama
 
 ```text
-PORTOFOLIO/
-├── assets/
-│   ├── profile.jpg
-│   ├── sertifikat-ai.jpg
-│   ├── sertifikat-ai-2.jpg
-│   └── sertifikat-ai-2.jpg
-├── .editorconfig
-├── .gitignore
-├── CLAUDE.md
-├── index.html
-├── README.md
-├── script.js
-└── styles.css
+app/                 App Router, metadata, Tailwind CSS dan layout
+components/          Scene lanyard 3D React Three Fiber
+public/assets/       Aset web yang disajikan Next.js
+assets/              Arsip aset sumber
 ```
 
-## Menjalankan secara lokal
+Foto profil dan sertifikat di `public/assets` disalin dari aset lama. Jangan mengganti nama gambar tanpa memperbarui path di komponen.
 
-Cara paling sederhana: buka `index.html` di browser. Untuk pengalaman yang lebih mirip hosting, jalankan server statis dari folder proyek, misalnya dengan ekstensi **Live Server** di VS Code.
+## Profil & privasi
 
-Tidak ada perintah `npm install` atau build yang diperlukan.
+Nama: Octiyana Fa'iz Surya Permana · Program: Informatika, Universitas Nasional · Tanggal lahir: 25 Oktober 2006. Tanggal lahir ditampilkan sesuai permintaan pemilik.
 
-## Gambar
-
-Pastikan nama file dan huruf besar/kecilnya sama persis dengan path pada `index.html`:
-
-- `assets/profile.jpg` — foto profil.
-- `assets/sertifikat-ai.jpg` — sertifikat lokakarya AI dan Data Innovation dari Zenith Academy.
-- `assets/sertifikat-ai-2.jpg` — sertifikat kedua yang ditampilkan pada portofolio.
-
-Jangan mengganti nama file tanpa memperbarui atribut `src` pada `index.html`.
-
-## Kontak dan tautan
-
-Email dan WhatsApp sudah diarahkan ke alamat/nomor pemilik portofolio. Kartu proyek mengarah ke repositori GitHub masing-masing. Tautan GitHub pada bagian kontak saat ini menuju halaman utama GitHub; ganti ke profil pribadi bila URL profil yang ingin ditampilkan sudah dipastikan.
-
-## Publikasi
-
-Situs ini dapat di-host sebagai situs statis, misalnya di GitHub Pages, Netlify, atau Vercel. Unggah isi folder proyek ke repositori; atur root proyek sebagai direktori publik dan tidak perlu menentukan build command.
-
-## Pemeriksaan cepat
-
-Periksa sintaks JavaScript dengan Node.js:
-
-```sh
-node --check script.js
-```
-
-Periksa juga bahwa ketiga gambar pada folder `assets/` ikut diunggah ke GitHub.
+Kontak dan link repositori saat ini dipertahankan dari situs lama; pastikan email/WhatsApp sesuai sebelum memublikasikan.
 
 ## Teknologi
 
-HTML5 · CSS3 · JavaScript · Google Fonts (DM Sans, DM Mono, Playfair Display)
+Next.js · React · TypeScript · Tailwind CSS 4 · Three.js · React Three Fiber · Drei
 
 ## Lisensi
 
-Belum ada lisensi penggunaan ulang yang ditetapkan. Minta izin sebelum menggunakan foto, sertifikat, atau materi pribadi yang ada di repositori ini.
+Belum ada lisensi penggunaan ulang. Minta izin sebelum menggunakan foto, sertifikat, atau materi pribadi di repositori ini.

@@ -1,25 +1,17 @@
-# Panduan untuk Claude
+# Panduan coding assistant
 
-## Gambaran proyek
+## Stack dan struktur
 
-Portofolio ini adalah situs statis satu halaman dalam Bahasa Indonesia. Gunakan HTML, CSS, dan JavaScript murni. Tidak ada framework, bundler, package manager, maupun dependensi npm.
-
-## Berkas utama
-
-- `index.html` — konten, struktur semantik, navigasi, metadata, dan tautan aset.
-- `styles.css` — seluruh gaya visual, tata letak responsif, fokus keyboard, dan preferensi reduced motion.
-- `script.js` — menu navigasi mobile, fallback gambar sertifikat, dan tahun hak cipta.
-- `assets/` — foto profil dan sertifikat yang digunakan langsung oleh HTML.
+Proyek portofolio ini menggunakan Next.js App Router, React, TypeScript, Tailwind CSS 4, Three.js dan React Three Fiber.
+- `app/`: layout, halaman, metadata, Tailwind dan responsive CSS.
+- `components/lanyard-scene.tsx`: kartu ID 3D dan lanyard berbasis R3F.
+- `public/assets/`: salinan aset yang disajikan oleh Next.js; `assets/` menyimpan sumber asli.
 
 ## Aturan perubahan
-
-- Pertahankan antarmuka dan teks situs dalam Bahasa Indonesia; nama proyek dan judul sertifikat resmi boleh tetap menggunakan nama aslinya.
-- Pertahankan gaya editorial yang lapang, tipografi sederhana, warna netral, dan aksen terracotta. Hindari neon, gradient mencolok, efek glow, dan glassmorphism.
-- Jaga HTML semantik, teks alternatif gambar, navigasi keyboard, dan layout mobile.
-- Jika mengubah nama atau lokasi gambar, perbarui `src` terkait pada `index.html` dan dokumentasi `README.md`.
-- Jangan menghapus tautan repositori proyek, alamat email, atau tautan WhatsApp tanpa permintaan eksplisit.
-- Jangan menambahkan framework atau dependensi baru untuk perubahan sederhana.
+- Pertahankan Bahasa Indonesia, tema dark glassmorphism minimalis, navigasi keyboard dan tata letak responsif.
+- Informasi profil (nama, tanggal lahir 25 Oktober 2006) ditampilkan atas permintaan pemilik.
+- Jaga WebGL hemat daya (`frameloop="demand"`), fallback scene, dan dukungan reduced motion.
+- Perbarui `README.md` jika mengubah struktur atau cara menjalankan.
 
 ## Validasi
-
-Jalankan `node --check script.js` setelah mengubah JavaScript. Periksa juga semua path gambar, tautan anchor, dan tampilan pada lebar desktop serta mobile.
+Jalankan `npm run lint`, `npx tsc --noEmit`, dan `npm run build` setelah perubahan.
